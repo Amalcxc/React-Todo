@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import TodoItem from "./TodoItem";
+import TodoItem from './TodoItem';
 
 class TodosList extends Component {
-  render() { 
+  render() {
     return <div>
       <ul>
-        {this.props.todos.map(todo => (
-          <TodoItem 
-          key={todo.id} 
-          todo={todo} 
+        {this.props.todos.map((todo) => (
+          <TodoItem
+          key={todo.id}
+          todo={todo}
           handleCheckboxProps={this.props.handleCheckboxProps}
           deleteTodoProps={this.props.deleteTodoProps}
           />
@@ -17,5 +17,5 @@ class TodosList extends Component {
     </div>;
   }
 }
- 
+
 export default TodosList;
